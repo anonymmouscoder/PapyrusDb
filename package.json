@@ -1,0 +1,35 @@
+{
+  "name": "papyrusdb",
+  "version": "0.1.0",
+  "description": "PapyrusDb: Un cloud de notes décentralisé et auto-hébergeable.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node bin/prompt_install.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "notes",
+    "decentralized",
+    "cloud",
+    "self-hosted",
+    "p2p",
+    "nodejs",
+    "api"
+  ],
+  "author": "ZexusDev",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "figlet": "^1.8.2",
+    "inquirer": "^8.2.6",
+    "litejsondb": "^2.2.0",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
