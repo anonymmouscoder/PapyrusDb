@@ -68,12 +68,6 @@ async function promptInstallation() {
       default: generateServerKey()
     },
     {
-      type: 'confirm',
-      name: 'cors',
-      message: 'Autoriser CORS ?',
-      default: true
-    },
-    {
       type: 'input',
       name: 'port',
       message: 'Port du serveur :',
@@ -86,7 +80,7 @@ async function promptInstallation() {
     {
       type: 'input',
       name: 'bindAddress',
-      message: 'Adresse IP d\'écoute :',
+      message: "Adresse IP d'écoute :",
       default: '0.0.0.0'
     }
   ]);
@@ -111,7 +105,7 @@ async function promptInstallation() {
   */
 
   serverKey: '${answers.serverKey}',
-  cors: ${answers.cors},
+  cors: true,
   port: ${parseInt(answers.port)},
   bindAddress: '${answers.bindAddress}'
 };`;
@@ -127,7 +121,7 @@ async function promptInstallation() {
     console.log('\nDémarre ton serveur avec : ' + chalk.bold('npm start'));
     console.log('Pense à garder ta serverKey secrète.\n');
   } catch (err) {
-    saveSpinner.fail('Erreur lors de l\'enregistrement.');
+    saveSpinner.fail("Erreur lors de l'enregistrement.");
     console.error(chalk.red('Erreur : ' + err.message));
     process.exit(1);
   }
